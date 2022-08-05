@@ -1,0 +1,5 @@
+@startuml
+class ChangeTopicToWalkthrough <<partial>> {
+    # <<override>> BuildTargetModel(modelBuilder:ModelBuilder) : void
+}
+@enduml

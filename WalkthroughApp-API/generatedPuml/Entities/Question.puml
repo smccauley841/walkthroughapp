@@ -1,0 +1,7 @@
+@startuml
+class Question {
+    + Id : int <<get>> <<set>>
+    + QuestionText : string <<get>> <<set>>
+}
+Question --> "Walkthrough" Walkthrough
+@enduml

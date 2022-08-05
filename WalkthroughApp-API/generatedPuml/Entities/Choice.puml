@@ -1,0 +1,8 @@
+@startuml
+class Choice {
+    + Id : int <<get>> <<set>>
+    + ChoiceText : string <<get>> <<set>>
+    + IsAnswer : bool <<get>> <<set>>
+}
+Choice --> "QuestionId" Question
+@enduml

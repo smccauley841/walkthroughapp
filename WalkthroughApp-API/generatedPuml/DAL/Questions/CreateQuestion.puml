@@ -1,0 +1,11 @@
+@startuml
+class CreateQuestion {
+    + CreateQuestion(context:DataContext)
+    + Create(newItem:NewQuestion) : Question
+    + DoesItemExist(newItem:NewQuestion) : bool
+}
+class "ICreate`2"<T1,T2> {
+}
+"ICreate`2" "<Question,NewQuestion>" <|-- CreateQuestion
+CreateQuestion --> "_context" DataContext
+@enduml

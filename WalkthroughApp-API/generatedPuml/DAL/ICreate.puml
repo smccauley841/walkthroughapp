@@ -1,0 +1,6 @@
+@startuml
+interface "ICreate`2"<TOne,TTwo> {
+    Create(newItem:TTwo) : TOne
+    DoesItemExist(newItem:TTwo) : bool
+}
+@enduml

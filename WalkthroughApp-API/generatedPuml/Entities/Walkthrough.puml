@@ -1,0 +1,7 @@
+@startuml
+class Walkthrough {
+    + Id : int <<get>> <<set>>
+    + WalkthroughName : string <<get>> <<set>>
+}
+Walkthrough --> "EmployeeRole" JobTitle
+@enduml

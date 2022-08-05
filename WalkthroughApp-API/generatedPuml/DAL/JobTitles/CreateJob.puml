@@ -1,0 +1,11 @@
+@startuml
+class CreateJob {
+    + CreateJob(context:DataContext)
+    + Create(newItem:NewJobTitle) : JobTitle
+    + DoesItemExist(newItem:NewJobTitle) : bool
+}
+class "ICreate`2"<T1,T2> {
+}
+"ICreate`2" "<JobTitle,NewJobTitle>" <|-- CreateJob
+CreateJob --> "_context" DataContext
+@enduml

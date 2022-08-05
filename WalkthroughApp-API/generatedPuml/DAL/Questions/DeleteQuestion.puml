@@ -1,0 +1,13 @@
+@startuml
+class DeleteQuestion {
+    + DeleteQuestion(context:DataContext, getQuestions:IGet<Question>)
+    + <<async>> Delete(deletedQuestion:Question) : Task<bool>
+}
+class "IDelete`1"<T> {
+}
+class "IGet`1"<T> {
+}
+"IDelete`1" "<Question>" <|-- DeleteQuestion
+DeleteQuestion --> "_context" DataContext
+DeleteQuestion --> "_getQuestions<Question>" "IGet`1"
+@enduml

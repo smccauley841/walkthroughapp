@@ -1,0 +1,15 @@
+@startuml
+class AccountController {
+    + AccountController(context:DataContext, encodePassword:IEncodePassword)
+    + <<async>> Register(newUser:UserRegistration) : Task<IActionResult>
+    + <<async>> Login(loginDetails:LoginDetails) : Task<IActionResult>
+    - {static} DoesPasswordMatch(encodedPassword:byte[], user:User) : bool
+    - {static} IsJobTitleValid(newUser:UserRegistration) : bool
+    - {static} IsPasswordValid(newUser:UserRegistration) : bool
+    - {static} IsUserNameValid(newUser:UserRegistration) : bool
+    - <<async>> DoesUserExist(username:string) : Task<bool>
+}
+WalktorughAppApiController <|-- AccountController
+AccountController --> "_context" DataContext
+AccountController --> "_encodePassword" IEncodePassword
+@enduml

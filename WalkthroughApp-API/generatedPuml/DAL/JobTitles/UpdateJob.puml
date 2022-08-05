@@ -1,0 +1,10 @@
+@startuml
+class UpdateJob {
+    + UpdateJob(context:DataContext)
+    + <<async>> UpdateItem(item:JobTitle) : Task<JobTitle>
+}
+class "IUpdate`1"<T> {
+}
+"IUpdate`1" "<JobTitle>" <|-- UpdateJob
+UpdateJob --> "_context" DataContext
+@enduml

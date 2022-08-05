@@ -1,0 +1,6 @@
+@startuml
+class DataContextModelSnapshot <<partial>> {
+    # <<override>> BuildModel(modelBuilder:ModelBuilder) : void
+}
+ModelSnapshot <|-- DataContextModelSnapshot
+@enduml

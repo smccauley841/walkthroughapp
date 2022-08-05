@@ -1,0 +1,7 @@
+@startuml
+class UserRegistration {
+    + UserName : string <<get>> <<set>>
+    + Password : string <<get>> <<set>>
+    + JobTitle : string <<get>> <<set>>
+}
+@enduml

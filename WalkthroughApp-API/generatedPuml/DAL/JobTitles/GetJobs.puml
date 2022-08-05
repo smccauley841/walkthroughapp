@@ -1,0 +1,12 @@
+@startuml
+class GetJobs {
+    + GetJobs(context:DataContext)
+    + <<async>> GetAll() : Task<IEnumerable<JobTitle>>
+    + GetById(id:int) : JobTitle
+    + GetByWalkthroughId(walkThroughId:int) : IList<JobTitle>
+}
+class "IGet`1"<T> {
+}
+"IGet`1" "<JobTitle>" <|-- GetJobs
+GetJobs --> "_context" DataContext
+@enduml

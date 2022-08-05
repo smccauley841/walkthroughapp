@@ -1,0 +1,10 @@
+@startuml
+class UpdateChoice {
+    + UpdateChoice(context:DataContext)
+    + <<async>> UpdateItem(item:Choice) : Task<Choice>
+}
+class "IUpdate`1"<T> {
+}
+"IUpdate`1" "<Choice>" <|-- UpdateChoice
+UpdateChoice --> "_context" DataContext
+@enduml

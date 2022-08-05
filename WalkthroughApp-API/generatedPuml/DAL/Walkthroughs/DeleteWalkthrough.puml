@@ -1,0 +1,10 @@
+@startuml
+class DeleteWalkthrough {
+    + DeleteWalkthrough(context:DataContext)
+    + <<async>> Delete(deletedWalkthrough:Walkthrough) : Task<bool>
+}
+class "IDelete`1"<T> {
+}
+"IDelete`1" "<Walkthrough>" <|-- DeleteWalkthrough
+DeleteWalkthrough --> "_context" DataContext
+@enduml

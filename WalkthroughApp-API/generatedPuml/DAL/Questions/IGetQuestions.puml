@@ -1,0 +1,8 @@
+@startuml
+interface IGetQuestions {
+    GetByWalkthroughId(walkThroughId:int) : IList<Question>
+}
+class "IGet`1"<T> {
+}
+"IGet`1" "<Question>" <|-- IGetQuestions
+@enduml

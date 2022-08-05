@@ -1,0 +1,11 @@
+@startuml
+class CreateChoices {
+    + CreateChoices(context:DataContext)
+    + <<async>> CreateQuestionChoices(newChoices:NewChoice[]) : Task<IList<Choice>>
+    + DoesQuestionChoiceExist(newChoice:NewChoice) : Task<bool>
+    + DoesQuestionAlreadyHaveACorrectAnswer(newChoice:NewChoice) : Task<bool>
+    - AddChoice(x:Choice) : void
+}
+ICreateChoices <|-- CreateChoices
+CreateChoices --> "_context" DataContext
+@enduml

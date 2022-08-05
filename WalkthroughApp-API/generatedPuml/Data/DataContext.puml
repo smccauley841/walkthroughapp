@@ -1,0 +1,13 @@
+@startuml
+class DataContext {
+    + DataContext(options:DbContextOptions)
+}
+class "DbSet`1"<T> {
+}
+DbContext <|-- DataContext
+DataContext --> "Users<User>" "DbSet`1"
+DataContext --> "Questions<Question>" "DbSet`1"
+DataContext --> "Walkthroughs<Walkthrough>" "DbSet`1"
+DataContext --> "JobTitles<JobTitle>" "DbSet`1"
+DataContext --> "Choices<Choice>" "DbSet`1"
+@enduml

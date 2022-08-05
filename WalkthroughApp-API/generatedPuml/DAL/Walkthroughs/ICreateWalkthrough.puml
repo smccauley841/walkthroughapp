@@ -1,0 +1,8 @@
+@startuml
+interface ICreateWalkthrough {
+    DoesWalkthroughExist(newWalkthrough:NewWalkthrough) : bool
+}
+class "ICreate`2"<T1,T2> {
+}
+"ICreate`2" "<Walkthrough,NewWalkthrough>" <|-- ICreateWalkthrough
+@enduml

@@ -1,0 +1,5 @@
+@startuml
+class WalktorughAppApiController {
+}
+ControllerBase <|-- WalktorughAppApiController
+@enduml

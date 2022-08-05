@@ -1,0 +1,11 @@
+@startuml
+class CreateWalkthrough {
+    + CreateWalkthrough(context:DataContext)
+    + Create(newWalkthrough:NewWalkthrough) : Walkthrough
+    + DoesItemExist(newItem:NewWalkthrough) : bool
+}
+class "ICreate`2"<T1,T2> {
+}
+"ICreate`2" "<Walkthrough,NewWalkthrough>" <|-- CreateWalkthrough
+CreateWalkthrough --> "_context" DataContext
+@enduml

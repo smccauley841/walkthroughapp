@@ -1,0 +1,5 @@
+@startuml
+class NewJobTitle {
+    + Name : string <<get>> <<set>>
+}
+@enduml

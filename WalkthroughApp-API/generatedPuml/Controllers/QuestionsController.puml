@@ -1,0 +1,22 @@
+@startuml
+class QuestionsController {
+    + QuestionsController(getQuestion:IGetQuestions, createQuestion:ICreate<Question, NewQuestion>, deleteQuestion:IDelete<Question>, updateQuestion:IUpdate<Question>)
+    + <<async>> GetAll() : Task<IActionResult>
+    + <<async>> GetQuestionsByWalkthroughId(walkthroughId:int) : Task<IActionResult>
+    + <<async>> GetQuestionsByQuestionId(questionId:int) : Task<IActionResult>
+    + <<async>> AddNewQuestion(newQuestion:NewQuestion) : Task<IActionResult>
+    + <<async>> DeleteQuestion(deletedQuestion:int) : Task<IActionResult>
+    + <<async>> UpdateQuestion(updatedQuestion:Question) : Task<IActionResult>
+}
+class "ICreate`2"<T1,T2> {
+}
+class "IDelete`1"<T> {
+}
+class "IUpdate`1"<T> {
+}
+WalktorughAppApiController <|-- QuestionsController
+QuestionsController --> "_getQuestion" IGetQuestions
+QuestionsController --> "_createQuestion<Question,NewQuestion>" "ICreate`2"
+QuestionsController --> "_deleteQuestion<Question>" "IDelete`1"
+QuestionsController --> "_updateQuestion<Question>" "IUpdate`1"
+@enduml

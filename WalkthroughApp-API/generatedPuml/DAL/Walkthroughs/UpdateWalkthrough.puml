@@ -1,0 +1,10 @@
+@startuml
+class UpdateWalkthrough {
+    + UpdateWalkthrough(context:DataContext)
+    + <<async>> UpdateItem(item:Walkthrough) : Task<Walkthrough>
+}
+class "IUpdate`1"<T> {
+}
+"IUpdate`1" "<Walkthrough>" <|-- UpdateWalkthrough
+UpdateWalkthrough --> "_context" DataContext
+@enduml

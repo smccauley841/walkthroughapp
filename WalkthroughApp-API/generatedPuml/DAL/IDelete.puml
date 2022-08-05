@@ -1,0 +1,5 @@
+@startuml
+interface "IDelete`1"<T> {
+    Delete(deletedItem:T) : Task<bool>
+}
+@enduml

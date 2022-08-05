@@ -1,0 +1,10 @@
+@startuml
+class GetQuestions {
+    + GetQuestions(context:DataContext)
+    + <<async>> GetAll() : Task<IEnumerable<Question>>
+    + GetById(id:int) : Question
+    + GetByWalkthroughId(walkThroughId:int) : IList<Question>
+}
+IGetQuestions <|-- GetQuestions
+GetQuestions --> "_context" DataContext
+@enduml

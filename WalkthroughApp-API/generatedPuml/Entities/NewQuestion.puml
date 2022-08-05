@@ -1,0 +1,6 @@
+@startuml
+class NewQuestion {
+    + QuestionText : string <<get>> <<set>>
+    + WalkthroughId : int <<get>> <<set>>
+}
+@enduml

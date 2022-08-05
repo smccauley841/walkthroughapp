@@ -1,0 +1,11 @@
+@startuml
+class GetWalkthroughs {
+    + GetWalkthroughs(context:DataContext)
+    + <<async>> GetAll() : Task<IEnumerable<Walkthrough>>
+    + GetById(id:int) : Walkthrough
+}
+class "IGet`1"<T> {
+}
+"IGet`1" "<Walkthrough>" <|-- GetWalkthroughs
+GetWalkthroughs --> "_context" DataContext
+@enduml

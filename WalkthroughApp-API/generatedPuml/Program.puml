@@ -1,0 +1,14 @@
+@startuml
+class "AddTransient`2"<T1,T2> {
+}
+class "IGet`1"<T> {
+}
+class "ICreate`2"<T1,T2> {
+}
+class "IDelete`1"<T> {
+}
+class "IUpdate`1"<T> {
+}
+class "AddDbContext`1"<T> {
+}
+@enduml

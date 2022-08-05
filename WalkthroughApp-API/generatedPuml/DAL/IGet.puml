@@ -1,0 +1,6 @@
+@startuml
+interface "IGet`1"<T> {
+    GetAll() : Task<IEnumerable<T>>
+    GetById(id:int) : T
+}
+@enduml

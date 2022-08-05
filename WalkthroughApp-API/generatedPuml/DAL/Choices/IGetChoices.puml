@@ -1,0 +1,8 @@
+@startuml
+interface IGetChoices {
+    GetByQuestionId(questionId:int) : Task<IList<Choice>>
+}
+class "IGet`1"<T> {
+}
+"IGet`1" "<Choice>" <|-- IGetChoices
+@enduml

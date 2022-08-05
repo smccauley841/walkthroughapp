@@ -1,0 +1,7 @@
+@startuml
+class NewChoice {
+    + ChoiceText : string <<get>> <<set>>
+    + Question : int <<get>> <<set>>
+    + IsAnswer : bool <<get>> <<set>>
+}
+@enduml

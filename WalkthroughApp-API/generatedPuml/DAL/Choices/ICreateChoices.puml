@@ -1,0 +1,7 @@
+@startuml
+interface ICreateChoices {
+    CreateQuestionChoices(newChoices:NewChoice[]) : Task<IList<Choice>>
+    DoesQuestionChoiceExist(newChoice:NewChoice) : Task<bool>
+    DoesQuestionAlreadyHaveACorrectAnswer(newChoice:NewChoice) : Task<bool>
+}
+@enduml

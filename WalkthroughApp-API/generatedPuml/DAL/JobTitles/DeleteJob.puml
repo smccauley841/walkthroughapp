@@ -1,0 +1,10 @@
+@startuml
+class DeleteJob {
+    + DeleteJob(context:DataContext)
+    + <<async>> Delete(deletedItem:JobTitle) : Task<bool>
+}
+class "IDelete`1"<T> {
+}
+"IDelete`1" "<JobTitle>" <|-- DeleteJob
+DeleteJob --> "_context" DataContext
+@enduml

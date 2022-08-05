@@ -1,0 +1,6 @@
+@startuml
+class NewWalkthrough {
+    + WalkthroughName : string <<get>> <<set>>
+    + EmployeeRole : int <<get>> <<set>>
+}
+@enduml

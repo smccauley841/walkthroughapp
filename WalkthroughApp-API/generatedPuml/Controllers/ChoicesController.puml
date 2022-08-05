@@ -1,0 +1,20 @@
+@startuml
+class ChoicesController {
+    + ChoicesController(getChoices:IGetChoices, createChoices:ICreateChoices, deleteChoice:IDelete<Choice>, updateChoice:IUpdate<Choice>)
+    + <<async>> GetAll() : Task<IActionResult>
+    + <<async>> GetById(choiceId:int) : Task<IActionResult>
+    + <<async>> AddQuestionChoices(newChoices:NewChoice[]) : Task<IActionResult>
+    + <<async>> GetByQuestionId(id:int) : Task<IActionResult>
+    + <<async>> DeleteChoice(deletedChoice:int) : Task<IActionResult>
+    + <<async>> UpdateChoice(updatedChoice:Choice) : Task<IActionResult>
+}
+class "IDelete`1"<T> {
+}
+class "IUpdate`1"<T> {
+}
+WalktorughAppApiController <|-- ChoicesController
+ChoicesController --> "_getChoices" IGetChoices
+ChoicesController --> "_createChoices" ICreateChoices
+ChoicesController --> "_deleteChoice<Choice>" "IDelete`1"
+ChoicesController --> "_updateChoice<Choice>" "IUpdate`1"
+@enduml

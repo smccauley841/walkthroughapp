@@ -1,0 +1,5 @@
+@startuml
+interface "IUpdate`1"<T> {
+    UpdateItem(item:T) : Task<T>
+}
+@enduml

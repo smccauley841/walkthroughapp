@@ -1,0 +1,10 @@
+@startuml
+class GetChoices {
+    + GetChoices(context:DataContext)
+    + <<async>> GetAll() : Task<IEnumerable<Choice>>
+    + GetById(id:int) : Choice
+    + <<async>> GetByQuestionId(questionId:int) : Task<IList<Choice>>
+}
+IGetChoices <|-- GetChoices
+GetChoices --> "_context" DataContext
+@enduml

@@ -1,0 +1,10 @@
+@startuml
+class DeleteChoices {
+    + DeleteChoices(context:DataContext)
+    + <<async>> Delete(deletedItem:Choice) : Task<bool>
+}
+class "IDelete`1"<T> {
+}
+"IDelete`1" "<Choice>" <|-- DeleteChoices
+DeleteChoices --> "_context" DataContext
+@enduml
